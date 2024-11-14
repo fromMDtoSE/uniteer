@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'AdiHaus';
+    src: url('https://assets.codepen.io/6060109/adihaus_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AdiHaus";
+    src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+  
+:root {
+    --theme-color-black: #333333; /* rgba(51, 51, 51, 1) */
+    --theme-color-brown: #423A3A; 
+    --theme-color-red: #63BAC2;
+    --theme-color-white: #FEFFFF; /* rgba(254, 255, 255, 1) */
+}
+
+html, body {
+    background-color: var(--theme-color-white);
+    font-family: "AdiHaus";
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mobile-container {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+
+.hero-banner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-banner .logo-wrapper {
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: auto;
+}
+    
+    .logo-wrapper img {
+        display: block;
+        height: 4.5rem;
+        margin: 0 auto;
+        width: 10.5rem;
+    }
+
+.hero-banner .hero-image {
+    background-image: url(https://assets.codepen.io/6060109/athlete-girl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 376px;
+    width: 100%;
+}
+
+.text-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+    .text-info > * {
+        padding: 0 2.5rem 1rem;
+    }
+
+    .text-info h2:nth-child(1) {
+        color: var(--theme-color-red);
+        font-weight: normal;
+        padding-top: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .text-info h2 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: var(--theme-color-brown);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .text-info p {
+        color: var(--theme-color-black);
+        line-height: 24px;
+    }
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url(https://assets.codepen.io/6060109/destop-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        height: inherit;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 3.5rem;
+    }
+
+    .mobile-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hero-banner .logo-wrapper {
+        margin-left: 3.5rem;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: row;
+    }
+        .logo-wrapper img {
+            margin: 0 0 0;
+            padding-left: 2.5rem;
+        }
+
+    .hero-image {
+        display: none;
+    }
+
+    .text-info {
+        text-align: left;
+        align-items: start;
+    }
+    
+        .text-info h2 {
+            font-size: 4.5rem;
+        }
+
+        .text-info p {
+            font-size: 16px;
+        }
+  
+        .text-info {
+            margin: 1rem 0 7rem;
+        }
+
+    .hero-image-desktop {
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-image-desktop img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
